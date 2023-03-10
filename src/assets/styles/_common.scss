@@ -1,6 +1,5 @@
 :host {
   font-family: Gtwalsheimprotrial, sans-serif;
-  //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
@@ -68,6 +67,16 @@ p {
   max-width: 560px;
   flex-direction: column;
   align-items: center;
+
+  &-name {
+    position: relative;
+    font-size: 6.5em;
+    margin: 0;
+
+    &--dot {
+      color: #5f99ff;
+    }
+  }
 }
 
 svg.material-icons {
