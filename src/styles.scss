@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: GTWalsheimPro-Regular, sans-serif;
+}
+
+p {
+  font-family: GTWalsheimPro-Thin, sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
