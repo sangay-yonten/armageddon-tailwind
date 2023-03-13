@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'assets/styles/common';
+@use 'assets/styles/variables';
+@use 'assets/styles/font';
+@use 'assets/styles/utility';
+
 * {
-  font-family: GTWalsheimPro-Regular, sans-serif;
+  font-family: variables.$regular-font;
 }
 
 p {
-  font-family: GTWalsheimPro-Thin, sans-serif;
+  font-family: variables.$thin-font;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'assets/styles/common';

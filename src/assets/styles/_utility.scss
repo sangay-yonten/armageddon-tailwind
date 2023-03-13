@@ -1,0 +1,16 @@
+@use 'variables';
+
+/* Font Utilities */
+.font {
+  &--bold {
+    font-family: variables.$bold-font;
+  }
+
+  &--regular {
+    font-family: variables.$regular-font;
+  }
+
+  &--thin {
+    font-family: variables.$thin-font;
+  }
+}
