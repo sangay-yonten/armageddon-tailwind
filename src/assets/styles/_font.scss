@@ -1,9 +1,14 @@
 @font-face {
   font-family: 'GTWalsheimPro-Regular';
-  src: url('assets/fonts/GTWalsheimPro-Regular.ttf?#iefix') format('truetype');
+  src: url('../fonts/GTWalsheimPro-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'GTWalsheimPro-Thin';
-  src: url('assets/fonts/GTWalsheimPro-Thin.ttf?#iefix') format('truetype');
+  src: url('../fonts/GTWalsheimPro-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GTWalsheimPro-Bold';
+  src: url('../fonts/GTWalsheimPro-Bold.ttf') format('truetype');
 }
