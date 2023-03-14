@@ -1,1 +1,33 @@
-<router-outlet></router-outlet>
+
+<body [ngClass]="{ dark: isDarkEnable }">
+  <nav class="w-full bg-white border-gray-200 sticky top-0 z-10 flex items-center md:flex-row md:px-20 md:py-6 xs:p-6 xs:py-2 dark:bg-gray-900">
+    <div style="width: inherit;">
+      <arm-header></arm-header>
+    </div>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" (click)="toggleNavbar()">
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div [ngClass]="{'hidden w-full': !showMenu, 'absolute top-10 right-1': showMenu}" class="md:block md:w-auto" id="navbar-default">
+      <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a routerLink="work" class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Work</a>
+        </li>
+        <li>
+          <a routerLink="about" class="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+        </li>
+        <li class="cursor-pointer hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">
+          <a *ngIf="isDarkEnable" (click)="changeTheme()" mode-button [ngClass]="{'flex justify-center' : showMenu}" class="block py-2 px-3 animate-pulse">
+            <img class="switch-icon" src="assets/images/light.svg" alt="light" />
+          </a>
+          <a *ngIf="!isDarkEnable" (click)="changeTheme()" mode-button [ngClass]="{'flex justify-center' : showMenu}" class="block py-2 px-3 animate-pulse">
+            <img class="switch-icon" src="assets/images/dark.svg" alt="dark" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <arm-footer></arm-footer>
+</body>
