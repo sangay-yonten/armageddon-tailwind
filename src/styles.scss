@@ -4,6 +4,16 @@
 @use 'assets/styles/font';
 @use 'assets/styles/utility';
 
+:root {
+  --mode: day;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mode: dark;
+  }
+}
+
 * {
   font-family: variables.$regular-font;
 }

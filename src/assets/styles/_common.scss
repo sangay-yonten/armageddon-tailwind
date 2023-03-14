@@ -37,10 +37,6 @@ p {
     font-size: 6.5em;
     margin: 0;
 
-    @media screen and (max-width: 480px) {
-      font-size: 4em;
-    }
-
     &--dot {
       color: #5f99ff;
     }
@@ -68,7 +64,7 @@ footer a {
     margin: 4em 1.5em 6em;
 
     &-name {
-      font-size: 4em;
+      font-size: 3.5em;
     }
   }
 }
