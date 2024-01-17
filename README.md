@@ -1,4 +1,4 @@
-# Armageddon - Angular/TailwindCSS/Flowbite
+# Project Armageddon
 
 This web application is a contemporary creation, utilizing the [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2 and bolstered by two robust frontend tools: [_**Tailwind CSS**_](https://tailwindcss.com/) framework and [_**Flowbite**_](https://flowbite.com/) UI kit.
 
